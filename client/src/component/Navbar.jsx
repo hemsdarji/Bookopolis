@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full z-50 bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300">
-      <nav className={`py-4 lg:px-24 px-4 ${isSticky ? "sticky top-0  left-0 right-0 bg-blue-600": ""}`}>
+      <nav className={`py-4 lg:px-24 px-4 ${isSticky ? "sticky top-0  left-0 right-0 bg-yellow-300": ""}`}>
         <div  className="flex justify-between items-center text-base gap-8">
         
           {/* logo */}

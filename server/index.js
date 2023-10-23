@@ -6,16 +6,16 @@ const cors = require("cors")
 app.use(cors());
 app.use(express.json()); // Add body parser middleware to parse JSON requests
 
-app.get('/', (req, res) => {
-  res.send('Hello');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello');
+// });
 
 // MongoDB configuration
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
-const uri = "mongodb+srv://hemsdarji8160304190:9FlKeMwkXSzY5WNK@test-db.uf9oscc.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://hemsdarji8160304190:9FlKeMwkXSzY5WNK@test-db.uf9oscc.mongodb.net/?retryWrites=true&w=majority";
 
-const client = new MongoClient(uri, {
+const client = new MongoClient(url, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,
@@ -43,6 +43,16 @@ async function run() {
       const books = await collection.find({}).toArray();
        res.send(books);
     })
+
+    // to get single book data
+
+    app.get("/book/:id", async(req,res) => {
+      const id = req.params.id;
+      const filter = {_id : new ObjectId(id)};
+      const result = await collection.findOne(filter);
+      res.send(result);
+     })
+ 
 
     // update book data : patch or update method uses
 
@@ -85,7 +95,10 @@ async function run() {
       const result = await collection.find(query).toArray();
       res.send(result);
     });
-    // http://localhost:5000/all-books?category=Fiction (find in google using this url for information perspective)
+    // http://localhost:5000/all-books?category=Fiction 
+
+
+    
 
     app.listen(port, () => {
       console.log(`Example app listening on port ${port}`);

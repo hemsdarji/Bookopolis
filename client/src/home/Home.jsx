@@ -4,6 +4,7 @@ import BannerSection from './BannerSection'
 import FavBook from './FavBook'
 import PromoBanner from './PromoBanner'
 import OtherBookSection from './OtherBookSection'
+import ReviewSection from './ReviewSection'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
     <FavBook />
     <PromoBanner />
     <OtherBookSection />
+    <ReviewSection />
     </div>
   )
 }
