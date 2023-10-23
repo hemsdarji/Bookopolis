@@ -1,11 +1,12 @@
-import {
-    createBrowserRouter,
-  } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../home/Home";
 import Shop from "../shop/Shop";
 import About from "../component/About";
 import Blog from "../component/Blog";
+import SingleBook from "../shop/SingleBook";
+
+
   
   const router = createBrowserRouter([
     {
@@ -27,6 +28,11 @@ import Blog from "../component/Blog";
         {
           path:"/blog",
           element:<Blog />
+        },
+        {
+          path:"/book/:id",
+          element:<SingleBook />,
+          loader:({params}) => fetch(`http://localhost:5002/book/${params.id}`)
         }
       ]
     },
