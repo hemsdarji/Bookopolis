@@ -74,9 +74,9 @@ const FooterSection = () => {
             </div>
             <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
               <Footer.Copyright
-                by="Flowbite™"
+                by="E-book™"
                 href="#"
-                year={2022}
+                year={2023}
               />
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                 <Footer.Icon
