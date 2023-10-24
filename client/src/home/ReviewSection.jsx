@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -41,10 +41,10 @@ const ReviewSection = () => {
         <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border  ">
           <div className="space-y-6">
             <div className="text-black flex gap-2">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
             </div>
             <div className="mt-7">
               <p className="mb-5">
@@ -68,10 +68,10 @@ const ReviewSection = () => {
         <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border  ">
           <div className="space-y-6">
             <div className="text-black flex gap-2">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
             </div>
             <div className="mt-7">
               <p className="mb-5">
@@ -95,10 +95,10 @@ const ReviewSection = () => {
         <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border  ">
           <div className="space-y-6">
             <div className="text-black flex gap-2">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
             </div>
             <div className="mt-7">
               <p className="mb-5">
@@ -122,10 +122,10 @@ const ReviewSection = () => {
         <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border  ">
           <div className="space-y-6">
             <div className="text-black flex gap-2">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
             </div>
             <div className="mt-7">
               <p className="mb-5">
@@ -149,10 +149,10 @@ const ReviewSection = () => {
         <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border  ">
           <div className="space-y-6">
             <div className="text-black flex gap-2">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
             </div>
             <div className="mt-7">
               <p className="mb-5">
@@ -176,10 +176,10 @@ const ReviewSection = () => {
         <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border  ">
           <div className="space-y-6">
             <div className="text-black flex gap-2">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
+              <span className="material-symbols-outlined">star</span>
             </div>
             <div className="mt-7">
               <p className="mb-5">
