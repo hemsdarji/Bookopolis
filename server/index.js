@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const rateLimit = require("express-rate-limit");
 const port = process.env.PORT || 5002; // Use 'PORT' instead of 'port'
 const cors = require("cors")
 
@@ -9,6 +10,13 @@ app.use(express.json()); // Add body parser middleware to parse JSON requests
 // app.get('/', (req, res) => {
 //   res.send('Hello');
 // });
+// Define a rate limit
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per windowMs
+});
+
+app.use(limiter);
 
 // MongoDB configuration
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
