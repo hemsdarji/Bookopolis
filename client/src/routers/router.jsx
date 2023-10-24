@@ -5,6 +5,11 @@ import Shop from "../shop/Shop";
 import About from "../component/About";
 import Blog from "../component/Blog";
 import SingleBook from "../shop/SingleBook";
+import DashboardLayout from "../dashboard/DashboardLayout";
+import Dashboard from "../dashboard/Dashboard";
+import UpLoadBook from "../dashboard/UpLoadBook";
+import ManageBooks from "../dashboard/ManageBooks";
+import EditBooks from "../dashboard/EditBooks";
 
 
   
@@ -36,6 +41,29 @@ import SingleBook from "../shop/SingleBook";
         }
       ]
     },
+    {
+      path: "/admin/dashboard",
+      element: <DashboardLayout />,
+      children: [
+        {
+          path: "/admin/dashboard",
+          element: <Dashboard />,
+        },
+        {
+          path: "/admin/dashboard/upload",
+          element: <UpLoadBook />,
+        },
+        {
+          path: "/admin/dashboard/manage",
+          element: <ManageBooks />,
+        },
+        {
+          path: "/admin/dashboard/edit-books/:id",
+          element: <EditBooks />,
+          loader:({params}) => fetch(`http://localhost:5002/book/${params.id}`)
+        }
+      ]
+    }
   ])
 
   export default router;

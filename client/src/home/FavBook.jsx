@@ -11,7 +11,7 @@ const FavBook = () => {
           className="rounded "
         />
       </div>
-      <div className="md:w-1/2   ">
+      <div className="md:w-1/2">
         <h2 className="font-bold text-5xl my-5 md:w-3/4 leading-snug">
           Find Your Favorite <br />
           <span className="text-blue-700"> Book Here!</span>

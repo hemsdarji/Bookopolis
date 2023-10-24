@@ -9,9 +9,7 @@ const App = () => {
   return (
     <>
     <Navbar />
-   
     <Outlet />
-    
     <FooterSection />
     </>
   )
