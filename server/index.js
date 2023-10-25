@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const rateLimit = require("express-rate-limit");
-const port = process.env.PORT || 5002; // Use 'PORT' instead of 'port'
+const port = process.env.PORT || 5000; // Use 'PORT' instead of 'port'
 const cors = require("cors")
 
 app.use(cors());
@@ -83,10 +83,7 @@ async function run() {
 
     app.delete("/book/:id", async (req, res) => {
       const id = req.params.id;
-      // req.params.id would be equal to "123."
-      // const filter = { _id: new ObjectId(id) };: This line creates a filter object that specifies which book to delete. 
-      // const result = await collection.deleteOne(filter);: This line performs the actual deletion of the book from the MongoDB database collection.
-      // res.send(result);: Finally, this line sends a response to the client. 
+      
       const filter = { _id: new ObjectId(id) };
       const result = await collection.deleteOne(filter);
       res.send(result);
