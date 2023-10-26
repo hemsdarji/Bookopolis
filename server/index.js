@@ -1,24 +1,14 @@
 const express = require('express');
 const app = express();
-const rateLimit = require("express-rate-limit");
-const port = process.env.PORT || 5000; // Use 'PORT' instead of 'port'
+const port = process.env.PORT || 5003; 
 const cors = require("cors")
+
 
 app.use(cors());
 app.use(express.json()); // Add body parser middleware to parse JSON requests
 
-// app.get('/', (req, res) => {
-//   res.send('Hello');
-// });
-// Define a rate limit
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
-});
-
-app.use(limiter);
-
 // MongoDB configuration
+
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
 const url = "mongodb+srv://hemsdarji8160304190:9FlKeMwkXSzY5WNK@test-db.uf9oscc.mongodb.net/?retryWrites=true&w=majority";
@@ -53,7 +43,6 @@ async function run() {
     })
 
     // to get single book data
-
     app.get("/book/:id", async(req,res) => {
       const id = req.params.id;
       const filter = {_id : new ObjectId(id)};
@@ -63,7 +52,6 @@ async function run() {
  
 
     // update book data : patch or update method uses
-
     app.patch("/book/:id", async (req, res) => {
       const id = req.params.id;
       const updateBookData = req.body;
@@ -80,7 +68,6 @@ async function run() {
     });
 
     // delete method use
-
     app.delete("/book/:id", async (req, res) => {
       const id = req.params.id;
       
@@ -90,7 +77,6 @@ async function run() {
     })
 
     // find method
-
     app.get("/all-books", async (req, res) => {
       let query = {};
       if (req.query?.category) {
@@ -101,9 +87,6 @@ async function run() {
       res.send(result);
     });
     // http://localhost:5000/all-books?category=Fiction 
-
-
-    
 
     app.listen(port, () => {
       console.log(`Example app listening on port ${port}`);
