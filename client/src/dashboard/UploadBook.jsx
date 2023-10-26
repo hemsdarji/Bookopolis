@@ -1,7 +1,8 @@
 import { Button, Label, TextInput, Textarea } from "flowbite-react";
 import { useState } from "react";
+import App from "../App";
 
-const UpLoadBook = () => {
+const UploadBook = () => {
   const bookCategory = [
     "Adventure-stories",
     "Non-fiction",
@@ -33,29 +34,31 @@ const UpLoadBook = () => {
     const bookDescription = form.bookDescription.value;
     const bookPdfUrl = form.bookPdfUrl.value;
 
-    const bookObject = [
+    const bookObject = {
       bookTitle,
       authorName,
       imageURL,
       category,
       bookDescription,
       bookPdfUrl,
-    ];
+    };
     console.log(bookObject);
 
     // send data to database
-  fetch("http://localhost:5000/upload-book", {
-  method: "POST",
-  headers: {
-    "Content-type": "application/json",
-  },
-  body: JSON.stringify(bookObject),
-})
-  .then((res) => res.json())
-  .then((data) => {
-    alert("Book successfully uploaded");
-  })
+  fetch("http://localhost:5003/upload-book", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body:JSON.stringify(bookObject),
+    })
+      .then((response) => {
+          return response.json();
+        }).then(data => {
+          alert("success");
+        })
   };
+
 
   return (
     <div className="px-4 my-12">
@@ -160,4 +163,4 @@ const UpLoadBook = () => {
   );
 };
 
-export default UpLoadBook;
+export default UploadBook;

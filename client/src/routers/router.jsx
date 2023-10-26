@@ -7,9 +7,9 @@ import Blog from "../component/Blog";
 import SingleBook from "../shop/SingleBook";
 import DashboardLayout from "../dashboard/DashboardLayout";
 import Dashboard from "../dashboard/Dashboard";
-import UpLoadBook from "../dashboard/UpLoadBook";
 import ManageBooks from "../dashboard/ManageBooks";
 import EditBooks from "../dashboard/EditBooks";
+import UploadBook from "../dashboard/UploadBook";
 
 
   
@@ -37,7 +37,7 @@ import EditBooks from "../dashboard/EditBooks";
         {
           path:"/book/:id",
           element:<SingleBook />,
-          loader:({params}) => fetch(`http://localhost:5002/book/${params.id}`)
+          loader:({params}) => fetch(`http://localhost:5003/book/${params.id}`)
         }
       ]
     },
@@ -51,7 +51,7 @@ import EditBooks from "../dashboard/EditBooks";
         },
         {
           path: "/admin/dashboard/upload",
-          element: <UpLoadBook />,
+          element: <UploadBook />,
         },
         {
           path: "/admin/dashboard/manage",
@@ -60,7 +60,7 @@ import EditBooks from "../dashboard/EditBooks";
         {
           path: "/admin/dashboard/edit-books/:id",
           element: <EditBooks />,
-          loader:({params}) => fetch(`http://localhost:5002/book/${params.id}`)
+          loader:({params}) => fetch(`http://localhost:5003/book/${params.id}`)
         }
       ]
     }
