@@ -5,9 +5,10 @@ const Shop = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5003/all-books")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
+      .then(res => res.json())
+      .then(data=> setBooks(data));
   }, []);
+  
   return (
     <div className="mt-28 px-4 lg:px-24">
       <h2 className="text-5xl font-bold text-center my-10">All Book are here</h2>

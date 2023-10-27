@@ -1,6 +1,5 @@
 import { Button, Label, TextInput, Textarea } from "flowbite-react";
 import { useState } from "react";
-import App from "../App";
 
 const UploadBook = () => {
   const bookCategory = [
@@ -56,6 +55,7 @@ const UploadBook = () => {
           return response.json();
         }).then(data => {
           alert("success");
+          form.reset();
         })
   };
 

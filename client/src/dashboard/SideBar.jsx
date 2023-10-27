@@ -18,7 +18,7 @@ const SideBar = () => {
     <Sidebar.Items>
       <Sidebar.ItemGroup>
         <Sidebar.Item
-          href="#"
+          href="/admin/dashboard"
           icon={HiChartPie}
         >
           <p>
